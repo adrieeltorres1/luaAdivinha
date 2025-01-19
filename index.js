@@ -8,7 +8,7 @@ numero.onchange = () => {
         if(tentativas.length > 0){
             for(let i = 0; i < tentativas.length; i++){
                 if(tentativas[i] == numeroDigitado){
-                    alert("Este número ja foi digitado");
+                    alert("Este número já foi digitado");
                     numero.value = '';
                     return;
                 }
@@ -16,21 +16,21 @@ numero.onchange = () => {
         }
         tentativas.push(numeroDigitado);
         if(numeroDigitado > numeroGerado){
-            alert('Bia esta pensando em numero menor')
+            alert('Lua está pensando em um número menor')
         }else if(numeroDigitado < numeroGerado){
-            alert('Bia esta pensando em numero maior')
+            alert('Lua está pensando em um número maior')
         }else{
             mensagem.innerHTML = `Parabéns o número é: ${numeroGerado}`;
             resultado.style.display = 'block';
             numero.disabled = true;
-            bia.src = "bia-sorrindo.png";
+            bia.src = "LuaSorrindo.png";
             reiniciar.innerText = 'Jogar novamente';
             reiniciar.style.display = 'block';
         }
         numero.value = '';
         palpites.innerHTML = tentativas.join('-');
     } else {
-        bia.src = "bia-chorando.png";
+        bia.src = "luaChorando.png";
         mensagem.innerHTML = `Você não acertou o número era: ${numeroGerado}`;
         resultado.style.display = 'block';
         reiniciar.style.display = 'block';
