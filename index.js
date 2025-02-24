@@ -20,6 +20,7 @@ numero.onchange = () => {
         }else if(numeroDigitado < numeroGerado){
             alert('Lua está pensando em um número maior')
         }else{
+            bia.src = "luaSorrindo.png";
             mensagem.innerHTML = `Parabéns o número é: ${numeroGerado}`;
             resultado.style.display = 'block';
             numero.disabled = true;
